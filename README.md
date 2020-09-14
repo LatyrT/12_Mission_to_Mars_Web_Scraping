@@ -15,7 +15,7 @@ In this assignment, Latyr is scraping several websites in order retrieve the dat
 
 
 ## Pre-requisite(s)
-install the required version of chromedriver.exe (https://chromedriver.chromium.org/home)
+Install the required version of chromedriver.exe (https://chromedriver.chromium.org/home)
 
 ## Methods
 * Python/Jupyter Notebook
@@ -23,7 +23,7 @@ install the required version of chromedriver.exe (https://chromedriver.chromium.
 * Used HTML, JavaScript and HTML
 
 ## Website or Links
-https://latyrt.github.io/14_JavaScript_Dashboards/index.html
+After running the app.py file, please go to the following url: http://localhost:8000/
 
 ## Results
 ![GitHub Logo](000_Instructions/Images/final_app_part2.png)
