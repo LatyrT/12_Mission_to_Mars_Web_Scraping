@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+  
+  <title>Index</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <style>
+    .Featured_Image{
+      position : relative;
+      width : 100%;
+      height : 100%;
+    }
+
+    .Hemisphere_img{
+      position : relative;
+      width : 100%;
+      height : 100%;
+    }
+
+    #HemispheresH1{
+      text-align: center;
+    }
+
+    .Mars_Latest_Tweet{
+      padding: 10px;
+      border-width: 10%;
+      height: 150px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      border: 2px solid  gainsboro;
+    }
+
+    .Separator{
+      height: 800px;
+    }
+
+    .hems1,.hems2,.hems3,.hems4{
+      border: 2px solid gainsboro;
+      margin-bottom: 20px;
+    }
+  </style>
+
+</head>
+
+
+<body>
+  <!-- ******************************-->
+  <!-- ********* Header *************-->
+  <!-- ******************************-->
+  <header>
+    <div class="container-fluid">
+      <div class="jumbotron text-center" >
+        <h1 ><strong>Mission to Mars</strong></h1>
+        <p>
+          <a class="btn btn-primary btn-lg" href="/scrape" role="button">
+            Scrape New Data
+          </a>
+        </p>
+    </div>
+
+  </header>
+
+  <!-- ******************************-->
+  <!-- *********  Main  *************-->
+  <!-- ******************************-->
+  <main>
+    <section class="container-fluid">
+      <h1><strong>Latest Mars News</strong></h1>
+      <h3><strong> {{Mars_Data.Titles_1}} </strong></h3>
+      <p>{{ Mars_Data.Paragraphs_1 }}</p>
+    </section>
+    
+    
+    <section class="container-fluid">
+      <div class='row'>
+        <div class='col-md-9 col-lg-9'>
+          <h1><strong>Featured Mars Image</strong></h1>
+          <img  class='Featured_Image' src="{{ Mars_Data.Featured_img }}" alt="Sloth">
+        </div>
+
+        <div class='col-md-3 col-lg-3'>
+          <div class="Mars_Latest_Tweet">
+            <h3><strong> Current Weather on Mars</strong></h3>
+            <p>{{ Mars_Data.Latest_Mars_Weather_Tweet }}</p>
+          </div>
+
+          <div class='Table'>
+            <h3><strong>Mars fact</strong></h3>
+            {{Mars_Data.table |safe}}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid" id='HemispheresH1'>
+      <h1><strong>Hemispheres</strong></h1><br>
+    </section>
+
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class='hems1'>
+            <img class='Hemisphere_img' src="{{ Mars_Data.Img_1 }}" alt="Sloth">
+            <h1><strong> {{Mars_Data.Img_1_title}} </strong></h1>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class='hems2'>
+            <img class='Hemisphere_img' src="{{ Mars_Data.Img_2 }}" alt="Sloth">
+            <h1><strong> {{Mars_Data.Img_2_title}} </strong></h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          <div class='hems3'>
+            <img class='Hemisphere_img' src="{{ Mars_Data.Img_3 }}" alt="Sloth">
+            <h1><strong> {{Mars_Data.Img_3_title}} </strong></h1>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class='hems4'>
+            <img class='Hemisphere_img' src="{{ Mars_Data.Img_4 }}" alt="Sloth">
+            <h1><strong> {{Mars_Data.Img_4_title}} </strong></h1>
+          <div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid">
+      <div class="Separator">
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- ******************************-->
+  <!-- *********  Footer  ***********-->
+  <!-- ******************************-->
+  <footer>
+    <section class="container-fluid">
+      <div class="jumbotron text-center">
+        <p>
+          <strong>© Copyright Latyr (05-2020)</strong>
+        </p>
+      </div>
+    </section>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
